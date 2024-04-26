@@ -1,0 +1,88 @@
+﻿<div class="container">
+    <div class="row align-items-center my-5">
+        @if (@Model.Gender == "M")
+        {
+            <div class="col-md-6">
+                <img src="~/images/gender/m_tshirts.jpg" alt="Men Image" class="img-fluid" />
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <h2 class="display-4">T-SHIRTS</h2>
+                    <p class="lead">Explore our collection of chic streetwear, featuring the latest styles.</p>
+                    <a asp-action="Products" asp-route-categoryId="1" asp-route-gender="M" class="btn btn-primary">VISIT</a>
+                 </div>
+            </div>
+        }
+        else
+        {
+            <div class="col-md-6">
+                <img src="~/images/gender/f_shirts.jpg" alt="Women Image" class="img-fluid" />
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <h2 class="display-4">T-SHIRTS</h2>
+                    <p class="lead">Explore our collection of chic streetwear, featuring the latest styles.</p>
+                    <a asp-action="Products" asp-route-categoryId="1" asp-route-gender="F" class="btn btn-primary">VISIT</a>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="row align-items-center my-5 align-text-with-image">
+        @if (@Model.Gender == "M")
+        {
+            <div class="col-md-6">
+                <div>
+                    <h2 class="display-4">PANTS</h2>
+                    <p class="lead">Introducing our stylish men's street outfit, perfect for any urban setting. Comfortable, trendy, and versatile.</p>
+                    <a asp-action="Products" asp-route-categoryId="2" asp-route-gender="M" class="btn btn-primary">VISIT</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="~/images/gender/m_pants.jpg" alt="Men Image" class="img-fluid" />
+            </div>
+        }
+        else
+        {
+            <div class="col-md-6">
+                <div>
+                    <h2 class="display-4">PANTS</h2>
+                    <p class="lead">Introducing our stylish men's street outfit, perfect for any urban setting. Comfortable, trendy, and versatile.</p>
+                    <a asp-action="Products" asp-route-categoryId="2" asp-route-gender="F" class="btn btn-primary">VISIT</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="~/images/gender/f_pants.jpg" alt="Women Image" class="img-fluid" />
+            </div>
+        }
+    </div>
+
+    <div class="row align-items-center my-5">
+        @if (@Model.Gender == "M")
+        {
+            <div class="col-md-6">
+                <img src="~/images/gender/m_shoes.jpg" alt="Men Image" class="img-fluid" />
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <h2 class="display-4">SHOES</h2>
+                    <p class="lead">Introducing our sophisticated and adaptable women's urban wear, crafted to enhance your city fashion.</p>
+                    <a asp-action="Products" asp-route-categoryId="3" asp-route-gender="M" class="btn btn-primary">VISIT</a>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="col-md-6">
+                <img src="~/images/gender/f_shoes.jpg" alt="Women Image" class="img-fluid" />
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <h2 class="display-4">SHOES</h2>
+                    <p class="lead">Introducing our sophisticated and adaptable women's urban wear, crafted to enhance your city fashion.</p>
+                    <a asp-action="Products" asp-route-categoryId="3" asp-route-gender="F" class="btn btn-primary">VISIT</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

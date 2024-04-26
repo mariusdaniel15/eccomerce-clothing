@@ -1,0 +1,50 @@
+﻿@model ProductDiscount
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2 text-center">
+            <h2 class="text-primary">CREATE NEW DISCOUNT</h2>
+            <hr />
+        </div>
+        <div asp-validation-summary="ModelOnly"></div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Name" class="p-0"></label>
+            <input asp-for="Name" type="text" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Description" class="p-0"></label>
+            <input asp-for="Description" type="text" class="form-control" />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="DiscountPercent" class="p-0"></label>
+            <input asp-for="DiscountPercent" type="text" class="form-control" />
+            <span asp-validation-for="DiscountPercent" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Active" class="p-0"></label>
+            <input asp-for="Active" type="text" class="form-control" />
+            <span asp-validation-for="Active" class="text-danger"></span>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-primary form-control">
+                    CREATE
+                </button>
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-controller="Discount" asp-action="Index" class="btn btn-outline-secondary form-control">
+                    GO BACK
+                </a>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

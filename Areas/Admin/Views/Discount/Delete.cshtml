@@ -1,0 +1,45 @@
+﻿@model ProductDiscount
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2 text-center">
+            <h2 class="text-primary">DELETE PRODUCT</h2>
+            <hr />
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Name" class="p-0"></label>
+            <input asp-for="Name" disabled type="text" class="form-control" />
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Description" class="p-0"></label>
+            <input asp-for="Description" disabled type="text" class="form-control" />
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="DiscountPercent" class="p-0"></label>
+            <input asp-for="DiscountPercent" disabled type="text" class="form-control" />
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Active" class="p-0"></label>
+            <input asp-for="Active" disabled type="text" class="form-control" />
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-danger form-control">
+                    DELETE
+                </button>
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-controller="Discount" asp-action="Index" class="btn btn-outline-secondary form-control">
+                    GO BACK
+                </a>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

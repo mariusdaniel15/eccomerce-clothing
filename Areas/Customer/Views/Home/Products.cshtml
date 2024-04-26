@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Product>
+
+@{
+    var gender = Model.FirstOrDefault()?.Gender;
+}
+
+<div class="row d-flex justify-content-around px-4">
+    <div class="col-6 col-md-2 offset-lg-1"></div>
+    <div class="offset-lg-4 mx-auto text-center pb-1">
+        <a asp-action="Gender" asp-route-gender="@gender" class="btn btn-outline-primary bg-gradient fw-semibold btn-sm text-uppercase">
+            <small>BACK</small>
+        </a>
+    </div>
+</div>
+
+<div class="row pb-3">
+    @foreach (var product in Model)
+    {
+        <div class="col-lg-3 col-sm-6">
+            <div class="row p-2">
+                <div class="col-12 p-1">
+                    <div class="card border-0 p-3 shadow border-top border-5 rounded">
+                        <div>
+                            <a asp-action="Details" asp-route-id="@product.Id">
+                                <img src="@product.ImageUrl" class="card-img-top rounded img-fluid" />
+                            </a>
+                        </div>
+                        <div class="card-body pb-0">
+                            <div class="pl-1">
+                                <p class="card-title h5 text-dark opacity-75 text-uppercase text-center">@product.Name</p>
+                            </div>
+                            <div class="pl-1">
+                                <p class="text-warning text-opacity-75 text-uppercase text-center"><span>@($"{product.Price:c}")</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

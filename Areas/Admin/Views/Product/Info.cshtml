@@ -1,0 +1,152 @@
+﻿<div class="container">
+
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-primary">
+                PRODUCT
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            NAME
+                        </th>
+                        <th>
+                            DESCRIPTION
+                        </th>
+                        <th>
+                            SKU
+                        </th>
+                        <th>
+                            PRICE
+                        </th>
+                        <th style="width: 160px;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Model.Product.Name</td>
+                        <td>@Model.Product.Description</td>
+                        <td>@Model.Product.SKU</td>
+                        <td>@Model.Product.Price</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a asp-controller="Product" asp-action="Upsert" asp-route-id="@Model.Product.Id" class="btn btn-outline-primary mx-2">
+                                    <i class="bi bi-pencil-square"></i> EDIT
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-primary">
+                CATEGORY
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            NAME
+                        </th>
+                        <th>
+                            DESCRIPTION
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Model.Category.Name</td>
+                        <td>@Model.Category.Description</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-primary">
+                INVENTORY
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            QUANTITY
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Model.Inventory.Quantity</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-primary">
+                DISCOUNT
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            NAME
+                        </th>
+                        <th>
+                            DESCRIPTION
+                        </th>
+                        <th>
+                            PERCENT
+                        </th>
+                        <th>
+                            ACTIVE
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Model.Discount.Name</td>
+                        <td>@Model.Discount.Description</td>
+                        <td>@Model.Discount.DiscountPercent</td>
+                        <td>@Model.Discount.Active</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="col-6 mx-auto text-center">
+    <a asp-controller="Product" asp-action="Index" class="btn btn-primary">
+        <i class="bi bi-backspace"></i> GO BACK
+    </a>
+</div>

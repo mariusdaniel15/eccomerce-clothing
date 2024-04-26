@@ -1,0 +1,45 @@
+﻿@model List<User>
+
+<div class="container">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">
+                USER LIST
+            </h2>
+        </div>
+        <div class="col-6 text-end mb-2">
+            <a asp-controller="User" asp-action="Upsert" class="btn btn-primary">
+                <i class="bi bi-person-fill-add"></i>  NEW USER
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="col-12">
+    <table id="tblData" class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    USERNAME
+                </th>
+                <th>
+                    FIRST NAME
+                </th>
+                <th>
+                    LAST NAME
+                </th>
+                <th>
+                    TELEPHONE
+                </th>
+                <th>
+                    ACTION
+                </th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+
+@section Scripts{
+    <script src="~/js/user.js"></script>
+}

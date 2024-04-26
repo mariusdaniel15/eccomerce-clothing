@@ -1,0 +1,136 @@
+﻿
+<div class="row pt-4">
+    <div class="col-6">
+        <h2 class="text-primary">
+            USER
+        </h2>
+    </div>
+</div>
+
+
+<div class="col-12">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    USERNAME
+                </th>
+                <th>
+                    FIRST NAME
+                </th>
+                <th>
+                    LAST NAME
+                </th>
+                <th>
+                    TELEPHONE
+                </th>
+                <th style="width: 100px;">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>@Model.User.Username</td>
+                    <td>@Model.User.FirstName</td>
+                    <td>@Model.User.LastName</td>
+                    <td>@Model.User.Telephone</td>
+                    <td>
+                        <div class="d-flex justify-content-center">
+                            <div class="btn-group" role="group">
+                                <a asp-controller="User" asp-action="Upsert" asp-route-id="@Model.User.Id" class="btn btn-outline-primary mx-2">
+                                    <i class="bi bi-pencil-square"></i> EDIT
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+    </div>
+
+<div class="row">
+    <div class="col-6">
+        <h2 class="text-primary">
+            ADDRESS
+        </h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Address Line 1
+                    </th>
+                    <th>
+                        Address Line 2
+                    </th>
+                    <th>
+                        City
+                    </th>
+                    <th>
+                        Country
+                    </th>
+                    <th>
+                        Postal Code
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Address.AddressLine1</td>
+                    <td>@Model.Address.AddressLine2</td>
+                    <td>@Model.Address.City</td>
+                    <td>@Model.Address.Country</td>
+                    <td>@Model.Address.PostalCode</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <h2 class="text-primary">
+            PAYMENT
+        </h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        PAYMENT TYPE
+                    </th>
+                    <th>
+                        PROVIDER
+                    </th>
+                    <th>
+                        ACCOUNT NO
+                    </th>
+                    <th>
+                        EXPIRY
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Payment.PaymentType</td>
+                    <td>@Model.Payment.Provider</td>
+                    <td>@Model.Payment.AccountNo</td>
+                    <td>@Model.Payment.Expiry</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="col-6 mx-auto text-center">
+    <a asp-controller="User" asp-action="Index" class="btn btn-primary">
+        <i class="bi bi-backspace"></i> GO BACK
+    </a>
+</div>
